@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US">
+
+<head>
+    <title>Alan Haggai Alavi's Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="jquery.tooltip.css" />
+    <script src='jquery.js' type='text/javascript'></script>
+    <script src='jquery.dimensions.js' type='text/javascript'></script>
+
+    <script src='jquery.tooltip.js' type='text/javascript'></script>
+    <script src='jquery.corners.js' type='text/javascript'></script>
+    <script type='text/javascript'>
+        $(document).ready(function(){
+
+            var url = document.URL;
+            var page = url.substr(url.indexOf('#') + 1);
+
+            $('#navbar').corners('10px');
+            $('#container').hide();
+            $('#container').fadeIn('slow');
+
+            switch(page) {
+                case 'home':
+                case 'code':
+                case 'link-roll':
+                case 'contact':
+                    $("#content > div").hide();
+                    $("div#" + page).fadeIn(3000);
+                    break
+                default:
+                    $("div#home").fadeIn(3000);
+            }
+
+            $('a').tooltip({
+                track: true,
+                delay: 0,
+                showURL: false,
+                showBody: " - ",
+                fade: 250
+            });
+
+            $("a.home").click(function () {
+                $("#content > div").hide();
+                $("div#home").fadeIn("slow");
+            });
+
+            $("a.code").click(function () {
+                $("#content > div").hide();
+                $("div#code").fadeIn("slow");
+            });
+
+            $("a.link-roll").click(function () {
+                $("#content > div").hide();
+                $("div#link-roll").fadeIn("slow");
+            });
+
+            $("a.contact").click(function () {
+                $("#content > div").hide();
+                $("div#contact").fadeIn("slow");
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-5111835-1");
+        pageTracker._trackPageview();
+    </script>
+
+</head>
+<body>
+
+    <div id="container">
+        <div id="header">
+            <h1>Alan Haggai Alavi's<br />Personal Website</h1>
+        </div>
+        <div id="navbar">
+            <ul>
+
+    <li><a href="#home" class='home' title='Home'>~</a></li>
+    <li><a href="http://blog.alanhaggai.org/" class='web-log' title='Web Log - Your guide to GNU/Linux and new technologies'>~/log</a></li>
+    <li><a href="#code" class='code' title='Code'>/usr/src</a></li>
+    <li><a href="#link-roll" class='link-roll' title='Link Roll'>~/links</a></li>
+    <li><a href="#contact" class='contact' title='Contact'>/etc/passwd</a></li>
+</ul>
+
+ 
+        </div>
+
+        <div id="content">
+            <div id='home' style='display: none'>
+    <p>Welcome to my website. Here you will find many things which are of interest to me. You may visit my <a href="http://blog.alanhaggai.org" title='Web Log - Your guide to GNU/Linux and new technologies'>web log</a>.</p>
+    <br />
+    <p>I intend to add more code snippets, stylesheets, et cetera in the coming days. So, do visit often.</p>
+
+</div>
+
+<div id='code' style='display: none'>
+
+    Few code snippets which have been written by me:<br />
+    <br />
+    <p><a href='http://search.cpan.org/~haggai/Net-Laconica-0.08/lib/Net/Laconica.pm' title='Net::Laconica'>Net::Laconica</a> - Perl extension for fetching from, and sending notices/messages to Laconica instances. If you wish to get the latest development snapshot, you may checkout the <a href='http://code.google.com/p/net-laconica/' title='Development Snapshot'>Google Code Subversion repository</a> of the project.</p>
+
+    <br />
+    <p><a href='http://code.google.com/p/identicator/' title='Identicator'>Identicator</a> -  This program logs into <a href='http://identi.ca' title='Identi.ca - Timeline'>http://identi.ca</a> by providing the authentication data. If the login was a success, the user will be able to see h(is|er) messages and also will be able to post new messages.</p>
+
+    <br />
+    <p><a href='http://code.google.com/p/revamped/' title='Revamped'>Revamped</a> - Revamped is a very flexible content management system written in <a href='http://perl.org/' title='Perl'>Perl</a> using <a href='http://template-toolkit.org/' title='Template Toolkit - The Template Toolkit is a fast, flexible and highly extensible template processing system.'>Template Toolkit</a> 2.</p>
+
+    <br />
+    <p>I will add more code snippets soon.</p>
+
+    <br />
+    <p>Currently I am working on a grant by <a href='http://perlfoundation.org/' title='The Perl Foundation'>The Perl Foundation</a>: <a href='http://www.perlfoundation.org/fixing_bugs_in_the_archive_zip_perl_module' title='Fixing Bugs in the Archive::Zip Perl Module'>Fixing Bugs in the Archive::Zip Perl Module</a></p>
+</div>
+
+<div id='link-roll' style='display: none'>
+
+    <ul>
+        <li><a href='http://bible.org' title='Bible.org - There are thousands of trustworthy Bible study resources here for your personal and ministry use.'>Bible.org</a></li>
+        <li><a href='http://sourceforge.net/projects/sword/' title='The Sword Project - The SWORD Project is an open source, cross-platform (Linux, Windows, Solaris, etc.) API/library for Bible software with a constantly growing list of front-ends (GUI, tex, web, etc.) and a library of over 200 text modules.'>The Sword Project</a></li>
+
+        <li><a href='http://perl.org/' title='The Perl Directory - Perl is a stable, cross platform programming language.'>The Perl Directory</a></li>
+        <li><a href='http://bordercollieuk.co.uk/' title='The Forum For UK and Non-UK Border Collie Owners - We pride ourselves on being a unique and friendly place with members based worldwide.'>The Forum For UK and Non-UK Border Collie Owners</a></li>
+        <li><a href='http://www.shlomifish.org/' title='Shlomi Fish&apos;s Homepage - Shlomi Fish is an Israeli software developer, and writer of stories, articles, essays and presentations.'>Shlomi Fish's Homepage</a></li>
+
+        <li><a href='http://tangocms.org/' title='TangoCMS - TangoCMS is a free and Open Source PHP Content Management System (CMS).'>TangoCMS</a></li>
+        <li><a href='http://w3schools.com/' title='W3Schools Online Web Tutorials - At W3Schools you will find all the Web-building tutorials you need, from basic HTML and XHTML to advanced XML, SQL, Database, Multimedia and WAP.'>W3Schools Online Web Tutorials</a></li>
+        <li><a href='http://archlinux.org/' title='Arch Linux - Arch Linux is a lightweight and flexible Linux® distribution that tries to Keep It Simple.'>Arch Linux</a></li>
+
+        <li><a href='http://www.debian.org/' title='Debian GNU/Linux - Debian GNU/Linux provides more than a pure OS: it comes with over 18733 packages, precompiled software bundled up in a nice format for easy installation on your machine.'>Debian GNU/Linux</a></li>
+        <li><a href='http://gentoo.org/' title='Gentoo Linux - Gentoo Linux is a special flavor of Linux that can be automatically optimized and customized for just about any application or need.'>Gentoo Linux</a></li>
+        <li><a href='http://linuxfromscratch.org/' title='Linux From Scratch - Linux From Scratch (LFS) is a project that provides you with step-by-step instructions for building your own custom Linux system, entirely from source code.'>Linux From Scratch</a></li>
+
+        <li><a href='http://jquery.com/' title='jQuery - jQuery is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.'>jQuery</a></li>
+        <li><a href='http://browsershots.org/' title='BrowserShots - Browsershots makes screenshots of your web design in different browsers.'>BrowserShots</a></li>
+        <li><a href='http://pokemonlake.com/' title='Pokémon Lake - Online Pokémon game.'>Pokémon Lake</a></li>
+
+    </ul>
+</div>
+
+<div id='contact' style='display: none'>
+You can contact me in several ways:<br />
+
+<br />
+<span class='tab' />Homepage:<br />
+<span class='tab' /><span class='tab' /><a href='http://alanhaggai.org/' title='Website - http://alanhaggai.org/'>http://alanhaggai.org/</a><br />
+<span class='tab' />E-mail:<br />
+<span class='tab' /><span class='tab' /><a href='mailto:alanhaggai@alanhaggai.org' title='Primary Email - alanhaggai@alanhaggai.org'>alanhaggai@alanhaggai.org</a><br />
+<span class='tab' /><span class='tab' /><a href='mailto:alanhaggai@gmail.com' title='Secondary Email - alanhaggai@gmail.com'>alanhaggai@gmail.com</a><br />
+
+<span class='tab' />Cell-Phone:<br />
+<span class='tab' /><span class='tab' />+91-9847996286<br />
+<span class='tab' />IRC:<br />
+
+<span class='tab' /><span class='tab' />alanhaggai on Freenode, MagNet<br />
+<span class='tab' /><span class='tab' />Alan on aXpi2, SurrealChat, GameCraftX<br />
+<span class='tab' />del.icio.us:<br />
+<span class='tab' /><span class='tab' /><a href='http://del.icio.us/alanhaggai' title='Del.icio.us Bookmarks - http://del.icio.us/alanhaggai'>http://del.icio.us/alanhaggai</a><br />
+<span class='tab' />Digg:<br />
+<span class='tab' /><span class='tab' /><a href='http://digg.com/users/alanhaggai/' title='Digg Profile - http://digg.com/users/alanhaggai/'>http://digg.com/users/alanhaggai/</a><br />
+
+<span class='tab' />CPAN:<br />
+<span class='tab' /><span class='tab' /><a href='http://search.cpan.org/~haggai/' title='CPAN Page - http://search.cpan.org/~haggai/'>http://search.cpan.org/~haggai/</a><br />
+
+<span class='tab' />use Perl:<br />
+<span class='tab' /><span class='tab' /><a href='http://use.perl.org/~alanhaggai/' title='use Perl; Journal - http://use.perl.org/~alanhaggai/'>http://use.perl.org/~alanhaggai/</a><br />
+<span class='tab' />LinkedIn:<br />
+<span class='tab' /><span class='tab' /><a href='http://www.linkedin.com/in/alanhaggai' title='LinkedIn Profile - http://www.linkedin.com/in/alanhaggai'>http://www.linkedin.com/in/alanhaggai</a><br />
+<span class='tab' />MySpace:<br />
+<span class='tab' /><span class='tab' /><a href='http://www.myspace.com/alanhaggai' title='MySpace Profile - http://www.myspace.com/alanhaggai'>http://www.myspace.com/alanhaggai</a><br />
+<br />
+
+<br />
+<b>Instant Messengers</b><br />
+
+<br />
+<span class='tab' />Google Talk:<br />
+<span class='tab' /><span class='tab' />alanhaggai<br />
+<span class='tab' />Jabber:<br />
+<span class='tab' /><span class='tab' />alanhaggai@jabber.org<br />
+<span class='tab' />Yahoo:<br />
+<span class='tab' /><span class='tab' />alan_haggai<br />
+<span class='tab' />MSN:<br />
+
+<span class='tab' /><span class='tab' />alanhaggai@hotmail.com<br />
+
+</div>
+
+
+        </div>
+        <div id="footer">
+            <a href='http://validator.w3.org/check?verbose=1&amp;uri=http%3A%2F%2Falanhaggai.org%2F%23link-roll' title='Valid XHTML 1.1'><img src='valid-xhtml.png' alt='Valid XHTML 1.1' /></a>
+            <a href='http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Falanhaggai.org&amp;profile=css3&amp;usermedium=all&amp;warning=2' title='Valid CSS Level 3.0'><img src='valid-css.png' alt='Valid CSS Level 3.0' /></a>
+            <a href='http://no-www.org/' title='www. is deprecated'><img src='http://no-www.org/images/blog-button.gif' alt='www. is deprecated' /></a>
+            <br />
+
+            <code>Copyleft 2008. All wrongs reserved.</code>
+
+        </div>
+    </div>
+
+</body>
+</html>
