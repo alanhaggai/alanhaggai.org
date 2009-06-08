@@ -89,7 +89,7 @@ body {
 }
 
 #navbar ul li a:hover {
-    border-bottom: 6px solid;
+    border-bottom: 1px dotted;
 }
 
 span.tab {
