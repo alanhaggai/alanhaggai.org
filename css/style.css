@@ -9,6 +9,14 @@ body {
     background-color: #FFF;
 }
 
+code {
+    padding: 2px;
+    font-size: 0.9em;
+    border: 1px solid #DEDEDE;
+    color: #444;
+    background-color: #F8F8FF;
+}
+
 #container {
     text-align: left;
     font-family: sans-serif;
