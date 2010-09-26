@@ -122,6 +122,11 @@ img {
     margin-bottom: 10px;
 }
 
+#footer .copyleft {
+    font-size: 0.8em;
+    color: #777;
+}
+
 span.strike {
     text-decoration: line-through;
 }
